@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prerit Mogre — Lead UX Designer</title>
+  <meta name="description" content="Lead UX Designer crafting enterprise-grade digital experiences across banking, AI, and healthcare. Currently at Citi, shaping the future of commercial banking.">
+  <meta name="author" content="Prerit Mogre">
+  <meta property="og:title" content="Prerit Mogre — Lead UX Designer">
+  <meta property="og:description" content="Crafting enterprise-grade digital experiences that transform complex workflows into intuitive journeys.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◉</text></svg>">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">Prerit Mogre</span>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">Prerit<span class="accent">.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#contact" class="nav-link nav-link--cta">Let's Talk</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#work" class="mobile-link">Work</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <div class="mobile-menu-footer">
+        <a href="mailto:prerit.s.mogre@gmail.com">prerit.s.mogre@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- HERO SECTION -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="section hero" id="hero">
+    <!-- THREE.JS CANVAS -->
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>Lead UX Designer · Pune, India</span>
+        </div>
+        <h1 class="hero-title reveal-text">
+          <span class="word">I</span>
+          <span class="word">craft</span>
+          <span class="word">digital</span>
+          <span class="word">experiences</span>
+          <span class="word">that</span>
+          <span class="word">people</span>
+          <span class="word accent-word">love.</span>
+        </h1>
+        <p class="hero-description">
+          12+ years transforming complex enterprise workflows into intuitive, 
+          accessible products across banking, AI, and healthcare.
+        </p>
+        <div class="hero-ctas">
+          <a href="#work" class="btn-primary magnetic">
+            <span>View Projects</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+          <a href="#contact" class="btn-outline magnetic">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-num" data-target="12" data-suffix="+">0</span>
+            <span class="stat-label">Years<br>Experience</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="30" data-suffix="+">0</span>
+            <span class="stat-label">Projects<br>Delivered</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">Major<br>Industries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-prompt">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- MARQUEE STRIP -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>User Research</span><span class="marquee-dot">◆</span>
+      <span>Design Systems</span><span class="marquee-dot">◆</span>
+      <span>Enterprise UX</span><span class="marquee-dot">◆</span>
+      <span>WCAG Accessibility</span><span class="marquee-dot">◆</span>
+      <span>Prototyping</span><span class="marquee-dot">◆</span>
+      <span>Journey Mapping</span><span class="marquee-dot">◆</span>
+      <span>Stakeholder Management</span><span class="marquee-dot">◆</span>
+      <span>AI/ML UX</span><span class="marquee-dot">◆</span>
+      <span>Data Visualization</span><span class="marquee-dot">◆</span>
+      <span>Figma</span><span class="marquee-dot">◆</span>
+      <span>Interaction Design</span><span class="marquee-dot">◆</span>
+      <span>Agile/Scrum</span><span class="marquee-dot">◆</span>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- ABOUT SECTION -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="section about" id="about">
+    <div class="about-content">
+      <div class="about-left">
+        <span class="section-tag reveal-text"><span class="word">About</span></span>
+        <h2 class="about-heading reveal-text">
+          <span class="word">Designing</span>
+          <span class="word">for</span>
+          <span class="word accent-word">impact</span>
+          <span class="word">at</span>
+          <span class="word">enterprise</span>
+          <span class="word">scale.</span>
+        </h2>
+      </div>
+      <div class="about-right">
+        <p class="about-text reveal-up">
+          I'm a Senior UX Designer & UI Developer at <strong>Citi</strong>, where I 
+          transform complex commercial banking workflows into seamless digital experiences 
+          used by thousands of business clients worldwide.
+        </p>
+        <p class="about-text reveal-up">
+          My approach blends deep user research, cross-functional collaboration, and 
+          data-driven design thinking. I'm passionate about accessibility, design systems, 
+          and the intersection of AI with enterprise UX — from intelligent KYC workflows 
+          to AI-based OCR tools.
+        </p>
+        <p class="about-text reveal-up">
+          Previously at <strong>HSBC</strong> (Global Banking & Markets) and <strong>Capita</strong> 
+          (Enterprise Software), I've built a career bridging design and development to 
+          deliver products people genuinely enjoy using.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- CASE STUDIES / WORK -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="section work" id="work">
+    <div class="work-inner">
+      <div class="work-header">
+        <span class="section-tag reveal-text"><span class="word">Selected</span> <span class="word">Work</span></span>
+        <h2 class="work-heading reveal-text">
+          <span class="word">Case</span>
+          <span class="word accent-word">Studies</span>
+        </h2>
+      </div>
+
+      <div class="work-grid">
+
+        <!-- Card 1: Citi -->
+        <article class="work-card reveal-up">
+          <div class="work-card-image">
+            <img src="assets/case-citi.png" alt="Citi Direct Commercial Banking Onboarding" loading="lazy">
+            <div class="work-card-overlay"></div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Enterprise Banking</span>
+            <h3>Citi Direct — Commercial Banking Onboarding</h3>
+            <p>Redesigned the onboarding experience for Citi's commercial banking platform. Reduced onboarding friction by 40% through journey mapping, iterative prototyping, and WCAG-compliant design systems.</p>
+            <div class="work-card-meta">
+              <span>Lead UX Designer</span>
+              <span>2023–Present</span>
+            </div>
+            <a href="https://www.figma.com/proto/RKpaLYcUuiq1iiP7xpdfZp/Case-Studies?node-id=135-597&viewport=110%2C225%2C0.05&t=3RmRQ2hOig6zvyON-8&scaling=contain&content-scaling=fixed&starting-point-node-id=135%3A597&page-id=43%3A1401&hotspot-hints=0&hide-ui=1" class="work-card-link" target="_blank" rel="noopener noreferrer">
+              <span>View Case Study</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: One Care -->
+        <article class="work-card reveal-up">
+          <div class="work-card-image">
+            <img src="assets/case-onecare.png" alt="Social Care One Care Platform" loading="lazy">
+            <div class="work-card-overlay"></div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">Healthcare · Social Impact</span>
+            <h3>Social Care — One Care Platform</h3>
+            <p>Designed a unified care management platform connecting social workers, patients, and providers. Simplified complex workflows through persona development and accessibility-first design principles.</p>
+            <div class="work-card-meta">
+              <span>UX Designer</span>
+              <span>Healthcare</span>
+            </div>
+            <span class="work-card-link work-card-link--soon">
+              <span>Coming Soon</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 3: AI KYC -->
+        <article class="work-card reveal-up">
+          <div class="work-card-image">
+            <img src="assets/case-kyc.png" alt="AI-Enabled KYC Verification" loading="lazy">
+            <div class="work-card-overlay"></div>
+          </div>
+          <div class="work-card-info">
+            <span class="work-card-tag">FinTech · Artificial Intelligence</span>
+            <h3>AI-Enabled KYC Verification</h3>
+            <p>Created an AI-powered Know Your Customer system that dramatically reduces manual review time. Designed compliance dashboards integrating ML confidence scores with human-in-the-loop workflows.</p>
+            <div class="work-card-meta">
+              <span>Lead UX Designer</span>
+              <span>FinTech</span>
+            </div>
+            <span class="work-card-link work-card-link--soon">
+              <span>Coming Soon</span>
+            </span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- EXPERIENCE -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="section experience" id="experience">
+    <div class="experience-content">
+      <span class="section-tag reveal-text"><span class="word">Career</span></span>
+      <h2 class="experience-heading reveal-text">
+        <span class="word">Where</span>
+        <span class="word">I've</span>
+        <span class="word accent-word">worked</span>
+      </h2>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- Citi -->
+        <div class="timeline-item">
+          <div class="timeline-node">
+            <div class="node-dot node-dot--active">
+              <span class="node-pulse"></span>
+            </div>
+          </div>
+          <div class="timeline-card reveal-up">
+            <div class="card-header">
+              <div class="card-title-group">
+                <div class="company-logo company-logo--citi" title="Citi">
+                  <img src="assets/logos/Citigroup-Logo.svg" alt="Citi Logo">
+                </div>
+                <div>
+                  <h3 class="exp-company">Citi</h3>
+                  <span class="exp-role">Assistant Vice President (UX)</span>
+                </div>
+              </div>
+              <div class="card-meta">
+                <span class="exp-period-badge exp-period-badge--active">July 2023 — Present</span>
+                <span class="exp-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Pune, MH</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="exp-bullets">
+                <li><strong>Led UX Strategy for Onboarding:</strong> Directed UX strategy for account and product onboarding, ensuring seamless and user-friendly client experiences.</li>
+                <li><strong>Mapped Client &amp; User Journeys:</strong> Mapped comprehensive end-to-end journeys for clients and internal users, identifying pain points &amp; implementing business solutions.</li>
+                <li><strong>Collaborated Across Teams:</strong> Worked closely with product, engineering, research, and design teams to create innovative solutions aligned with business goals.</li>
+                <li><strong>Provided Strategic UX Direction:</strong> Offered strategic guidance to designers, product owners, and engineering teams to enhance the impact of UX initiatives.</li>
+                <li><strong>Enhanced User Experience Solutions:</strong> Developed innovative design solutions ensuring business and customer needs are met efficiently.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag-chip">UX Strategy</span>
+                <span class="tag-chip">Commercial Banking</span>
+                <span class="tag-chip">Account Onboarding</span>
+                <span class="tag-chip">Journey Mapping</span>
+                <span class="tag-chip">Design Systems</span>
+                <span class="tag-chip">Leadership</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.citigroup.com/global/businesses/banking/commercial-bank" class="exp-link" target="_blank" rel="noopener noreferrer">
+                <span>Citi Commercial Banking</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HSBC -->
+        <div class="timeline-item">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+          </div>
+          <div class="timeline-card reveal-up">
+            <div class="card-header">
+              <div class="card-title-group">
+                <div class="company-logo company-logo--hsbc" title="HSBC">
+                  <img src="assets/logos/HSBC-Logo.svg" alt="HSBC Logo">
+                </div>
+                <div>
+                  <h3 class="exp-company">HSBC</h3>
+                  <span class="exp-role">Senior Software Consultant</span>
+                </div>
+              </div>
+              <div class="card-meta">
+                <span class="exp-period-badge">March 2018 — July 2023</span>
+                <span class="exp-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Pune, MH</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="exp-bullets">
+                <li><strong>Led User Research for Digital Solutions:</strong> Directed comprehensive user research for SmartServe Digital clients to inform user-friendly interface designs.</li>
+                <li><strong>Designed Client Journeys:</strong> Developed and implemented user journey designs for the US Paycheck Protection Program and E-Sign onboarding.</li>
+                <li><strong>Built Front-End &amp; UI Prototypes:</strong> Created numerous UI prototypes (HTML, CSS, JS) and contributed to SmartServe Portal front-end architecture using React.</li>
+                <li><strong>Developed AI-Based OCR Tool:</strong> Designed and developed the AI-based OCR tool (D-crest) using React &amp; Redux to enhance document processing efficiency.</li>
+                <li><strong>Created SmartForms &amp; Management Solutions:</strong> Designed SmartForms POC using Angular 5 &amp; Sketch and built Mastergroup Management POC to streamline operations.</li>
+                <li><strong>Collaborated on Screen Design:</strong> Partnered with the US CMB Covenants team to refine screens and optimize internal workflow.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag-chip">User Research</span>
+                <span class="tag-chip">React &amp; Redux</span>
+                <span class="tag-chip">AI/OCR Tooling</span>
+                <span class="tag-chip">Angular 5</span>
+                <span class="tag-chip">Sketch</span>
+                <span class="tag-chip">SmartServe</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.hsbc.com/who-we-are/businesses-and-customers" class="exp-link" target="_blank" rel="noopener noreferrer">
+                <span>HSBC Global Banking &amp; Markets</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capita -->
+        <div class="timeline-item">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+          </div>
+          <div class="timeline-card reveal-up">
+            <div class="card-header">
+              <div class="card-title-group">
+                <div class="company-logo company-logo--capita" title="Capita">
+                  <img src="assets/logos/Capita_logo.svg" alt="Capita Logo">
+                </div>
+                <div>
+                  <h3 class="exp-company">Capita</h3>
+                  <span class="exp-role">Senior Software Consultant</span>
+                </div>
+              </div>
+              <div class="card-meta">
+                <span class="exp-period-badge">July 2014 — March 2018</span>
+                <span class="exp-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Pune, MH</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="exp-bullets">
+                <li><strong>Developed Front-End Solutions:</strong> Designed and implemented user-friendly front-end interfaces, ensuring seamless integration with backend systems.</li>
+                <li><strong>Collaborated on UX Architecture:</strong> Participated in onsite UX architecture discussions, providing insights to optimize UI design and functionality.</li>
+                <li><strong>Created Custom UI Widgets &amp; Prototypes:</strong> Built dynamic UI widgets using Durandal and interactive Day 0 prototypes (HTML, CSS, JS) for early stakeholder visualization.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag-chip">Front-End Development</span>
+                <span class="tag-chip">UX Architecture</span>
+                <span class="tag-chip">Durandal</span>
+                <span class="tag-chip">HTML/CSS/JS</span>
+                <span class="tag-chip">Day 0 Prototypes</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.capita.com/" class="exp-link" target="_blank" rel="noopener noreferrer">
+                <span>Capita Plc.</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Freelance -->
+        <div class="timeline-item">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+          </div>
+          <div class="timeline-card reveal-up">
+            <div class="card-header">
+              <div class="card-title-group">
+                <div class="company-logo company-logo--freelance" title="Freelance">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="6" fill="#E8654A" fill-opacity="0.12"/>
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#E8654A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#E8654A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#E8654A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="exp-company">Freelance Experience</h3>
+                  <span class="exp-role">UI/UX Consultant &amp; Developer</span>
+                </div>
+              </div>
+              <div class="card-meta">
+                <span class="exp-period-badge">Independent</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <ul class="exp-bullets">
+                <li><strong>Developed Custom UI Prototypes:</strong> Created tailored UI prototypes for various clients, ensuring functional and visually appealing designs aligned with business goals.</li>
+                <li><strong>Collaborated on Large-Scale UX Projects:</strong> Partnered with cross-functional teams on extensive UX projects, providing design solutions that improved user engagement.</li>
+                <li><strong>Led UX Strategies for Clients:</strong> Directed UX strategies for multiple clients, optimizing user experiences and aligning design approaches with market trends.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag-chip">UI/UX Design</span>
+                <span class="tag-chip">Tailored Prototyping</span>
+                <span class="tag-chip">Client UX Strategy</span>
+                <span class="tag-chip">Cross-functional Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECOND MARQUEE -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="marquee marquee--reverse" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Figma</span><span class="marquee-dot">◆</span>
+      <span>Sketch</span><span class="marquee-dot">◆</span>
+      <span>Adobe XD</span><span class="marquee-dot">◆</span>
+      <span>InVision</span><span class="marquee-dot">◆</span>
+      <span>Axure RP</span><span class="marquee-dot">◆</span>
+      <span>Miro</span><span class="marquee-dot">◆</span>
+      <span>Jira</span><span class="marquee-dot">◆</span>
+      <span>Notion</span><span class="marquee-dot">◆</span>
+      <span>HTML/CSS</span><span class="marquee-dot">◆</span>
+      <span>JavaScript</span><span class="marquee-dot">◆</span>
+      <span>React</span><span class="marquee-dot">◆</span>
+      <span>Hotjar</span><span class="marquee-dot">◆</span>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- CONTACT -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="section contact" id="contact">
+    <canvas id="contactCanvas"></canvas>
+    <div class="contact-content">
+      <span class="section-tag reveal-text"><span class="word">Contact</span></span>
+      <h2 class="contact-heading reveal-text">
+        <span class="word">Let's</span>
+        <span class="word">build</span>
+        <span class="word">something</span>
+        <span class="word accent-word">great.</span>
+      </h2>
+      <p class="contact-text reveal-up">
+        I'm always open to discussing new opportunities, creative ideas, 
+        or how we can work together to build exceptional user experiences.
+      </p>
+      <div class="contact-links reveal-up">
+        <a href="mailto:prerit.s.mogre@gmail.com" class="contact-link magnetic">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">prerit.s.mogre@gmail.com</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/preritmogre" class="contact-link magnetic" target="_blank" rel="noopener noreferrer">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">in/preritmogre</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <span class="footer-left">© 2025 Prerit Mogre</span>
+      <span class="footer-right">Designed & built in Pune, India</span>
+    </div>
+  </footer>
+
+
+  <script src="three-scene.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
