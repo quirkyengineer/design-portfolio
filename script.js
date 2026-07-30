@@ -298,4 +298,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+
+  // ─── 13. GOOGLE ANALYTICS LINK & CTA CLICK TRACKING ───────
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a, button');
+    if (!link) return;
+
+    const href = link.getAttribute('href') || link.getAttribute('id') || '';
+    const text = link.innerText ? link.innerText.trim().replace(/\s+/g, ' ') : (link.getAttribute('aria-label') || '');
+    const sectionEl = link.closest('section, nav, footer, .mobile-menu');
+    const sectionId = sectionEl ? (sectionEl.id || sectionEl.tagName.toLowerCase()) : 'page';
+
+    let linkType = 'general_link';
+    if (link.classList.contains('nav-link') || link.classList.contains('mobile-link') || link.classList.contains('nav-logo')) {
+      linkType = 'navigation';
+    } else if (link.classList.contains('btn-primary') || link.classList.contains('btn-outline') || link.classList.contains('nav-link--cta')) {
+      linkType = 'cta_button';
+    } else if (link.classList.contains('work-card-link')) {
+      linkType = 'case_study_link';
+    } else if (link.classList.contains('exp-link')) {
+      linkType = 'experience_link';
+    } else if (link.classList.contains('contact-link')) {
+      linkType = href.startsWith('mailto:') ? 'email_contact' : 'social_contact';
+    } else if (link.id === 'navToggle') {
+      linkType = 'mobile_menu_toggle';
+    }
+
+    if (typeof window.gtag === 'function') {
+      // Standard GA4 event
+      window.gtag('event', 'click', {
+        event_category: linkType,
+        event_label: text,
+        link_url: href,
+        link_text: text,
+        link_type: linkType,
+        link_section: sectionId
+      });
+
+      // Additional standard select_content event for GA4 content reporting
+      window.gtag('event', 'select_content', {
+        content_type: linkType,
+        item_id: href || text
+      });
+    }
+  });
+
 });
+
