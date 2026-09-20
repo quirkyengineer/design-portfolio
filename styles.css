@@ -701,21 +701,19 @@ button { border: none; background: none; font: inherit; cursor: pointer; }
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  background: #ffffff;
   text-decoration: none;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.4s ease,
-              box-shadow 0.4s ease;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  transition: transform 0.4s var(--ease-out),
+              border-color 0.3s ease,
+              box-shadow 0.4s var(--ease-out);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
 }
 
 .notion-cta-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06);
+  border-color: var(--border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .notion-cta-card:hover .notion-cta-glow {
@@ -723,14 +721,14 @@ button { border: none; background: none; font: inherit; cursor: pointer; }
 }
 
 .notion-cta-card:hover .notion-cta-arrow {
-  transform: translate(5px, -5px);
-  opacity: 1;
+  transform: translate(3px, -3px);
+  color: var(--coral);
 }
 
 .notion-cta-glow {
   position: absolute;
   inset: -60px;
-  background: radial-gradient(ellipse at 60% 40%, rgba(120, 100, 255, 0.18), transparent 70%);
+  background: radial-gradient(ellipse at 60% 40%, rgba(232, 101, 74, 0.06), transparent 70%);
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -748,17 +746,16 @@ button { border: none; background: none; font: inherit; cursor: pointer; }
   width: 64px;
   height: 64px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(232, 101, 74, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary, #fff);
+  color: var(--coral);
   transition: background 0.3s ease;
 }
 
 .notion-cta-card:hover .notion-icon-wrap {
-  background: rgba(255,255,255,0.1);
+  background: rgba(232, 101, 74, 0.14);
 }
 
 .notion-cta-text {
@@ -766,34 +763,35 @@ button { border: none; background: none; font: inherit; cursor: pointer; }
 }
 
 .notion-cta-label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent, #a78bfa);
-  margin: 0 0 0.35rem;
+  color: var(--coral);
+  margin: 0 0 0.5rem;
 }
 
 .notion-cta-title {
-  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
-  font-weight: 700;
-  color: var(--text-primary, #fff);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 800;
+  color: var(--text);
   margin: 0 0 0.5rem;
-  line-height: 1.2;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
 }
 
 .notion-cta-desc {
-  font-size: 0.9rem;
-  color: var(--text-muted, rgba(255,255,255,0.55));
+  font-size: 0.92rem;
+  color: var(--text-secondary);
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .notion-cta-arrow {
   flex-shrink: 0;
-  color: var(--text-primary, #fff);
-  opacity: 0.5;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  color: var(--text);
+  transition: transform 0.3s var(--ease-out), color 0.2s ease;
 }
 
 @media (max-width: 600px) {
