@@ -301,10 +301,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── 13. GOOGLE ANALYTICS LINK & CTA CLICK TRACKING ───────
   document.addEventListener('click', (e) => {
-    const link = e.target.closest('a, button');
+    const link = e.target.closest('a, button, [role="button"]');
     if (!link) return;
 
-    const href = link.getAttribute('href') || link.getAttribute('id') || '';
+    const href = link.getAttribute('href') || link.getAttribute('id') || link.className || '';
     const text = link.innerText ? link.innerText.trim().replace(/\s+/g, ' ') : (link.getAttribute('aria-label') || '');
     const sectionEl = link.closest('section, nav, footer, .mobile-menu');
     const sectionId = sectionEl ? (sectionEl.id || sectionEl.tagName.toLowerCase()) : 'page';
@@ -324,24 +324,32 @@ document.addEventListener('DOMContentLoaded', () => {
       linkType = 'mobile_menu_toggle';
     }
 
-    if (typeof window.gtag === 'function') {
-      // Standard GA4 event
-      window.gtag('event', 'click', {
-        event_category: linkType,
-        event_label: text,
-        link_url: href,
-        link_text: text,
-        link_type: linkType,
-        link_section: sectionId
-      });
+    const payload = {
+      event_category: linkType,
+      event_label: text,
+      link_url: href,
+      link_text: text,
+      link_type: linkType,
+      link_section: sectionId
+    };
 
-      // Additional standard select_content event for GA4 content reporting
+    // Log to console for instant developer verification
+    console.log('📊 [GA4 Event]', 'custom_link_click', payload);
+
+    if (typeof window.gtag === 'function') {
+      // 1. Custom link click event (bypasses GA4 reserved 'click' event filter)
+      window.gtag('event', 'custom_link_click', payload);
+
+      // 2. Standard GA4 select_content event
       window.gtag('event', 'select_content', {
         content_type: linkType,
-        item_id: href || text
+        item_id: text || href
       });
+    } else {
+      console.warn('⚠️ [GA4] window.gtag is not initialized. (AdBlocker or offline)');
     }
-  });
+  }, true); // Capture phase ensures execution before propagation stops
 
 });
+
 
